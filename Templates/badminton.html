@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+BADMINTON
+{% endblock title %}
+
+{% block body %}
+<h1>BADMINTON</h1>
+    <ul>{% for i in changes %}
+        <li>Available Courts:<br><p> {{i.courts}}</p></li>
+        <li><p>Inventory:<br>{{i.inventory}}</p></li>
+        <li><p>Slots: <br>{{i.slots}}</p></li>
+        <li><p>Capacity:{{i.capacity}}</p></li>{% endfor%}
+    </ul>
+{% endblock body %}
+        

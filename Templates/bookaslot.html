@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booked Slots
+{% endblock title %}
+
+{% block body %}
+<div align='center'>
+<h3>Hurry up, Book your Slot Now !</h3>
+    <form action='' method='POST'>
+        {% csrf_token %}
+        Username<input type='text' name='user'><br>
+        Sport<input type='text' name='sport'><br>
+        <input type='submit'>
+    </form>
+</div>
+{% endblock body %}

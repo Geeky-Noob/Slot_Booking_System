@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Mittal Sports Complex
+{% endblock title %}
+
+{% block body %}
+<br>
+<a href='/bookaslot/'>Book Your Slot</a><br>
+<a href="/yourslots/">Check your booked Slots</a></br>
+<table bordercolor='black' border='1px'>
+    <tr>
+    {% for i in inst %}
+    <td>{{i.bookedfor}}</td>
+    {% endfor %}</tr>
+</table>
+{% endblock body %}

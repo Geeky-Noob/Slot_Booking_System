@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Registeration Page
+{% endblock title %}
+
+{% block body %}
+<div align='center'>
+<h3>Registration Page</h3><br>
+</div>
+    <form method="POST" class="form-group">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type='submit' name='create user'>
+  </form>
+{% endblock body %}
+        

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+UPCOMING MATCHES
+{% endblock title %}
+
+{% block body %}
+{% if upcomingmatches is not None %}
+<div align='center'>
+<table bordercolor='black' border='1px'>
+    <tr><td>Sports Name</td><td>Event Name</td><td>Event Time</td><td>Further Details</td></tr>
+    {% for i in upcomingmatches %}
+    <tr><td>{{i.sportsname}}</td><td>{{i.eventname}}</td><td>{{i.eventtime}}</td><td>{{i.details}}</td></tr>
+    {% endfor %}{% endif %}
+</table></div>
+{% endblock body %}
