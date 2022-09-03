@@ -8,9 +8,9 @@ Booked Slots
 <div align='center'>
 <h3>Booked Slots</h3>
     <table bordercolor='black' border='1px'>
-        <tr><td>Username</td><td>Sport</td></tr>
+        <tr><td>Username</td><td>Sport</td><td>cancel the booked slot</td></tr>
         {% for i in slot %}
-        <tr><td>{{i.username}}</td><td>{{i.bookedfor}}</td></tr>
+        <tr><td>{{i.username}}</td><td>{{i.bookedfor}}</td><td><a class="btn btn-sm btn-danger" href='/delete/{{i.username}}/{{i.bookedfor}}'>Cancel</a></td></tr>
         {% endfor %}
     </table>
 </div>
