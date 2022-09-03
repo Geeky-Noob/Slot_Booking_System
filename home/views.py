@@ -59,6 +59,14 @@ def featuredmatches(request):
     upcomingmatch=featuredMatches.objects.all()
     return render(request, 'upcomingmatches.html', {'upcomingmatches': upcomingmatch})
 
+def deleteSlot(request, username, bookedfor):
+    slot=slots.objects.get(username=username, bookedfor=bookedfor)
+    if request.method=='POST':
+        slot.delete()
+        return redirect('/bookedslots')
+    context={'username':slot.username, 'sport':slot.bookedfor}
+    return render(request, 'delete.html', context)
+
 def bookedslots(request):
     slot=slots.objects.all()
     return render(request, 'bookedslots.html', {'slot': slot})
