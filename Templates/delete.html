@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete booked slot
+{% endblock title %}
+
+{% block body %}
+<div align='center'>
+    <form action='' method='POST'>
+        {% csrf_token %}
+        Are you sure you want to delete slot booked by {{username}} for {{sport}}?
+        <input type='submit' name='Confirm'>
+    </form>
+</div>
+{% endblock body %}
